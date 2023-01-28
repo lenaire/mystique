@@ -54,7 +54,7 @@ declare module "styled-components" {
         600: string;
         700: string;
         800: string;
-      }
+      };
     };
     // typography: {
     //   h1: ThemeFont;

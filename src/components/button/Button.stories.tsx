@@ -1,4 +1,3 @@
-import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 
 import { Button } from "./Button";
@@ -10,7 +9,7 @@ export default {
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
   argTypes: {
     className: { control: { disable: true } },
-    onClick: { action: "button clicked" }
+    onClick: { action: "button clicked" },
   },
 } as ComponentMeta<typeof Button>;
 
@@ -24,29 +23,29 @@ Primary.args = {
   label: "Button",
 };
 
-// export const Disabled = Template.bind({});
-// Disabled.args = {
-//   type: "primary",
-//   label: "Button",
-//   disabled: true
-// };
+export const Disabled = Template.bind({});
+Disabled.args = {
+  type: "primary",
+  label: "Button",
+  disabled: true,
+};
 
-// export const Secondary = Template.bind({});
-// Secondary.args = {
-//   type: "secondary",
-//   label: "Button",
-// };
+export const Secondary = Template.bind({});
+Secondary.args = {
+  type: "secondary",
+  label: "Button",
+};
 
-// export const Large = Template.bind({});
-// Large.args = {
-//   type: "primary",
-//   size: "lg",
-//   label: "Button",
-// };
+export const Large = Template.bind({});
+Large.args = {
+  type: "primary",
+  size: "lg",
+  label: "Button",
+};
 
-// export const Small = Template.bind({});
-// Small.args = {
-//   type: "secondary",
-//   size: "sm",
-//   label: "Button",
-// };
+export const Small = Template.bind({});
+Small.args = {
+  type: "secondary",
+  size: "sm",
+  label: "Button",
+};

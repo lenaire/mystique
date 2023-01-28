@@ -1,21 +1,25 @@
+import React from "react";
 import { forwardRef, useCallback, useEffect, useState, useRef, MouseEvent } from "react";
 import styled, { DefaultTheme } from "styled-components";
 import { isPromise } from "$utility/promiseFunctions";
-import { checkPropTypes } from "prop-types";
 
 export type ButtonType = "primary" | "secondary";
 export type ButtonSize = "sm" | "md" | "lg";
 
 type ClickCallback = (e: MouseEvent<HTMLButtonElement>) => void | Promise<void>;
 
-const getBackgroundColor = (theme: DefaultTheme, type: ButtonType, disabled: boolean | undefined): string => {
+const getBackgroundColor = (
+  theme: DefaultTheme,
+  type: ButtonType,
+  disabled: boolean | undefined
+): string => {
   if (disabled) return theme.palette.grey[400];
 
   if (type === "secondary") return "transparent";
 
   // #1ea7fd
   return theme.palette[type].main;
-}
+};
 
 export interface ButtonProps {
   /**
@@ -48,7 +52,8 @@ const Container = styled.button<{
   padding: ${(props): string => `${props.theme.palette.button[props.$size].padding}`};
   font-size: ${(props): string => `${props.theme.palette.button[props.$size].fontSize}pt`};
   color: ${(props): string => `${props.$type === "primary" ? "#fff" : " #333"}`};
-  background-color: ${(props): string => getBackgroundColor(props.theme, props.$type, props.$disabled)};
+  background-color: ${(props): string =>
+    getBackgroundColor(props.theme, props.$type, props.$disabled)};
   box-shadow: ${(props): string =>
     `${props.$type === "primary" ? "" : "rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset"}`};
   width: 100%;
