@@ -23,7 +23,7 @@ module.exports = {
       tsconfig: "tsconfig.jest.json",
     },
   },
-  transform: {
-    "\\.svg$": "<rootDir>/.jest/svg.js",
+  moduleNameMapper: {
+    "\\.svg$": "<rootDir>/src/__mocks__/svg.ts",
   },
 };

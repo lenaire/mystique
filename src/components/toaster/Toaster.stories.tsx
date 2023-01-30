@@ -1,4 +1,3 @@
-import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 import { Button } from "$cmp/button/Button";
 import { useToaster } from "./internals/useToaster";

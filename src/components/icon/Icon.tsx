@@ -1,4 +1,4 @@
-import React, { forwardRef } from "react";
+import { forwardRef } from "react";
 import styled, { AnyStyledComponent } from "styled-components";
 import { CmpProps } from "$types";
 import { Direction } from "$utility/enums";

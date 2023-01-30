@@ -1,4 +1,3 @@
-import React from "react";
 import { forwardRef, useCallback, useEffect, useState, useRef, MouseEvent } from "react";
 import styled, { DefaultTheme } from "styled-components";
 import { isPromise } from "$utility/promiseFunctions";
