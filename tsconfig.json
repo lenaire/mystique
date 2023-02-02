@@ -1,0 +1,38 @@
+{
+    "compilerOptions": {
+      "strict": true,
+      "allowSyntheticDefaultImports": true,
+      "esModuleInterop": true,
+      "skipLibCheck": true,
+      "forceConsistentCasingInFileNames": true,
+      "noImplicitAny": true,
+      "strictNullChecks": true,
+      "importHelpers": true,
+      "removeComments": true,
+      "declaration": true,
+      "allowJs": false,
+      "noFallthroughCasesInSwitch": true,
+      "resolveJsonModule": true,
+      "isolatedModules": true,
+      "incremental": true,
+      "jsx": "react-jsx",
+      "module": "commonjs",
+      "moduleResolution": "node",
+      "target": "ES6",
+      "lib": ["dom", "dom.iterable", "esnext"],
+      "baseUrl": "./",
+      "paths": {
+        "$utility/*": ["src/utility/*"],
+        "$cmp/*": ["src/components/*"],
+        "$types": ["src/types/index.ts"],
+        "^/*": ["src/*"]
+      },
+  
+      "plugins": [
+        { "transform": "typescript-transform-paths" },
+        { "transform": "typescript-transform-paths", "afterDeclarations": true }
+      ]
+    },
+    "include": ["src", ".storybook/**/*", "src/types/custom.d.ts"]
+  }
+  

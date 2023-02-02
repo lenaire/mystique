@@ -1,0 +1,142 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Toaster /> renders correctly 1`] = `
+<div
+  className="sc-csuSiG"
+>
+  <div
+    className="sc-eDWCr"
+  >
+    <div
+      style={
+        {
+          "display": "flex",
+        }
+      }
+    >
+      <div
+        className="sc-kDvujY"
+      >
+        <div
+          className="sc-pyfCe"
+        >
+          <div
+            className="sc-hLBbgP"
+          >
+            <div
+              className="sc-eDvSVe"
+            >
+              <div
+                className="sc-gKPRtg kJaZZ"
+                onClick={[Function]}
+              >
+                <div
+                  className="sc-bcXHqe KpOAM"
+                  title="ActiveStep"
+                />
+                <span
+                  className="sc-iBYQkv gVhsnL"
+                >
+                  Step 1
+                </span>
+              </div>
+              <div
+                className="sc-ftTHYK bmqxSp"
+              >
+                <p
+                  className="sc-jSUZER eccVIr"
+                >
+                  Step 1
+                </p>
+              </div>
+            </div>
+            <div
+              className="sc-eDvSVe"
+            >
+              <div
+                className="sc-gKPRtg kJaZZ"
+                onClick={[Function]}
+              >
+                <div
+                  className="sc-dkrFOg dgYQmO"
+                  title="IncompleteStep"
+                />
+                <span
+                  className="sc-iBYQkv gWXaFx"
+                >
+                  Step 2
+                </span>
+              </div>
+              <div
+                className="sc-ftTHYK eHXvhP"
+              >
+                <p
+                  className="sc-jSUZER eccVIr"
+                >
+                  Step 2
+                </p>
+              </div>
+            </div>
+            <div
+              className="sc-eDvSVe"
+            >
+              <div
+                className="sc-gKPRtg kJaZZ"
+                onClick={[Function]}
+              >
+                <div
+                  className="sc-dkrFOg dgYQmO"
+                  title="IncompleteStep"
+                />
+                <span
+                  className="sc-iBYQkv gWXaFx"
+                >
+                  Step 3
+                </span>
+              </div>
+              <div
+                className="sc-ftTHYK elUIpr"
+              >
+                <p
+                  className="sc-jSUZER eccVIr"
+                >
+                  Completed
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="sc-jrcTuL eNOLMQ"
+        direction="left"
+      >
+        <p>
+          Step 1
+        </p>
+      </div>
+      <div
+        className="sc-jrcTuL knzFJL"
+        direction="left"
+      >
+        <p>
+          Step 2
+        </p>
+      </div>
+      <div
+        className="sc-jrcTuL knzFJL"
+        direction="left"
+      >
+        <p>
+          Step 3
+        </p>
+      </div>
+    </div>
+    <div
+      className="sc-ipEyDJ"
+    >
+      Footer
+    </div>
+  </div>
+</div>
+`;

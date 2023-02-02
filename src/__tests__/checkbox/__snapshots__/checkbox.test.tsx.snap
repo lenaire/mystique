@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Checkbox /> renders correctly 1`] = `
+<div
+  className="sc-gKPRtg"
+>
+  <label
+    className="sc-iBYQkv btqRMo"
+    htmlFor=":r0:"
+  >
+    <input
+      checked={false}
+      className="sc-ftTHYK qoTa-D"
+      data-testid="toggle-input"
+      id=":r0:"
+      onChange={[Function]}
+      type="checkbox"
+    />
+    <span
+      className="sc-pyfCe ebpNrf"
+    >
+      <div
+        className="sc-gswNZR FbElD sc-jrcTuL ezIwCV"
+        title="A(n) check icon"
+      />
+    </span>
+  </label>
+</div>
+`;
