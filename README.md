@@ -1,4 +1,4 @@
-[![test runner](https://github.com/lenaire/mystique/actions/workflows/test.yml/badge.svg)](https://github.com/lenaire/mystique/actions/workflows/test.yml)[![coverage report](https://github.com/lenaire/mystique/blob/gh-pages/badges.svg)](https://github.com/lenaire/mystique/actions/workflows/create-coverage-badges.yml)
+[![test runner](https://github.com/lenaire/mystique/actions/workflows/test.yml/badge.svg)](https://github.com/lenaire/mystique/actions/workflows/test.yml)
 
 # Mystique
 Mystique is a sample design system.  It is the theming and componentization of common user inputs and display elements.
