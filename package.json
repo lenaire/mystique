@@ -11,7 +11,7 @@
     "test:watch": "jest --watchAll",
     "make-badges": "coverage-badges",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
+    "build-storybook": "build-storybook  -o docs",
     "lint": "eslint --ext=tsx,ts src",
     "format": "npm run lint -- --fix --quiet",
     "prepare": "husky install",
