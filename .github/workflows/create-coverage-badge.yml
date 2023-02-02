@@ -19,7 +19,8 @@ jobs:
         node-version: 16
 
     - run: npm install
-    - run: npm run test:coverage
+    - run: npm run test:update
+    - run: npm run test:coverage    
     - run: npm i coverage-badges-cli -g
     - run: coverage-badges --output coverage/badges.svg
 
