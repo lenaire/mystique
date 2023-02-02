@@ -1,5 +1,45 @@
 import { keyframes } from "styled-components";
 
+export const SlideLeft = keyframes`
+  from {
+    margin-left: 100%;
+  }
+
+  to {
+    margin-left: 0%;
+  }
+`;
+
+export const SlideRight = keyframes`
+  from {
+    margin-left: -100%;
+  }
+
+  to {
+    margin-left: 0%;
+  }
+`;
+
+export const SlideDown = keyframes`
+  from {
+    margin-top: -100%;
+  }
+
+  to {
+    margin-top: 0%;
+  }
+`;
+
+export const SlideUp = keyframes`
+  from {
+    margin-top: 100%;
+  }
+
+  to {
+    margin-bottom: 0%;
+  }
+`;
+
 export const fadeIn = keyframes`
   from {
     opacity: 0;

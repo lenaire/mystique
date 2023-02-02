@@ -1,6 +1,9 @@
 import { forwardRef, useCallback, useEffect, useState, useRef, MouseEvent } from "react";
 import styled, { DefaultTheme } from "styled-components";
+import { CmpProps } from "$types";
+import { Icon, IconType } from "$cmp/icon/Icon";
 import { isPromise } from "$utility/promiseFunctions";
+import { Direction } from "$utility/enums";
 
 export type ButtonType = "primary" | "secondary";
 export type ButtonSize = "sm" | "md" | "lg";
@@ -20,7 +23,7 @@ const getBackgroundColor = (
   return theme.palette[type].main;
 };
 
-export interface ButtonProps {
+export interface ButtonProps extends CmpProps {
   /**
    * Is this the principal call to action on the page?
    */
@@ -36,6 +39,7 @@ export interface ButtonProps {
   submittingLabel?: string;
   disabled?: boolean;
   isSubmit?: boolean;
+  direction?: Direction;
   /**
    * Optional click handler
    */
@@ -55,7 +59,6 @@ const Container = styled.button<{
     getBackgroundColor(props.theme, props.$type, props.$disabled)};
   box-shadow: ${(props): string =>
     `${props.$type === "primary" ? "" : "rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset"}`};
-  width: 100%;
   font-family: "Nunito Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 700;
   font-size: ${(props): string => `${props.theme.palette.button[props.$size].fontSize}pt`};
@@ -80,7 +83,8 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       submittingLabel,
       isSubmit,
       disabled,
-      ...props
+      className,
+      ...rest
     },
     ref
   ) => {
@@ -133,12 +137,13 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     return (
       <Container
         type={isSubmit ? "submit" : "button"}
+        className={className}
         ref={ref}
         $type={type}
         $size={size}
         $disabled={disabled || isSubmitting}
         onClick={handleClick}
-        {...props}
+        {...rest}
       >
         {/* TODO: Typography component */}
         {isSubmitting ? submittingLabel : label}

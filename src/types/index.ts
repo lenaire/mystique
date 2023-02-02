@@ -1,12 +1,11 @@
-import type { PropsWithChildren, ReactElement, Dispatch } from "react";
+import type { PropsWithChildren, Dispatch } from "react";
 
 // /////////////////////////////////////////////////////////////////////////////////////////////////
 // React
 // /////////////////////////////////////////////////////////////////////////////////////////////////
-export type CmpReturn = ReactElement | null;
-
-export type CmpProps<T = unknown> = { className?: string } & T;
-
-export type CmpPropsWithChildren = CmpProps<PropsWithChildren>;
+export interface CmpProps {
+  className?: string;
+}
+export interface CmpPropsWithChildren extends CmpProps, PropsWithChildren {}
 
 export type SetStateFn<T> = Dispatch<React.SetStateAction<T>>;

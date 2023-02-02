@@ -9,7 +9,7 @@ jest.mock("react-dom", () => ({
   createPortal: (node: React.ReactNode): React.ReactPortal => node,
 }));
 
-describe("<Icon />", () => {
+describe("<Toaster />", () => {
   it("renders correctly", () => {
     const props: ToasterProps = {
       portalId: "toasts",

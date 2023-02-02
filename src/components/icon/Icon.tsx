@@ -53,24 +53,25 @@ const styledIcons = Object.keys(icons).reduce((acc, name) => {
   return acc;
 }, {} as typeof icons);
 
-export type IconProps = CmpProps<
-  {
-    icon: IconType;
-    direction?: Direction;
-  } & Omit<React.SVGProps<SVGSVGElement>, "ref">
->;
+export interface IconProps extends Omit<React.SVGProps<SVGSVGElement>, "ref">, CmpProps {
+  icon: IconType;
+  direction?: Direction;
+}
 
-export const Icon = forwardRef<SVGSVGElement, IconProps>(({ icon, direction, ...rest }, ref) => {
-  const title = `A(n) ${icon} icon`;
-  const rotationMap = customRotations[icon] || defaultRotationMap;
-  const IconCmp = styledIcons[icon];
+export const Icon = forwardRef<SVGSVGElement, IconProps>(
+  ({ icon, className, direction, ...rest }, ref) => {
+    const title = `A(n) ${icon} icon`;
+    const rotationMap = customRotations[icon] || defaultRotationMap;
+    const IconCmp = styledIcons[icon];
 
-  return (
-    <IconCmp
-      title={title}
-      {...rest}
-      transform={direction ? `rotate(${rotationMap[direction]})` : undefined}
-      ref={ref}
-    />
-  );
-});
+    return (
+      <IconCmp
+        title={title}
+        className={className}
+        {...rest}
+        transform={direction ? `rotate(${rotationMap[direction]})` : undefined}
+        ref={ref}
+      />
+    );
+  }
+);

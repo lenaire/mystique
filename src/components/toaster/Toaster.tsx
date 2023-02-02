@@ -108,13 +108,13 @@ const Body = styled.div`
 
 const getRootElement = (id: string): HTMLElement => document.getElementById(id) as HTMLElement;
 
-export type ToasterProps = CmpProps<{
+export interface ToasterProps extends CmpProps {
   portalId: string;
   position?: Position;
   type?: NotificationType;
   direction?: Direction;
   onClose?: (event?: React.MouseEvent<HTMLButtonElement>) => void;
-}>;
+}
 
 export const Toaster: FC<ToasterProps> = ({
   portalId,
@@ -123,11 +123,12 @@ export const Toaster: FC<ToasterProps> = ({
   direction = Direction.Right,
   position = Position.TopRight,
   onClose,
+  ...rest
 }) => {
   const { toasts, duration } = useToaster({});
 
   return createPortal(
-    <Container className={className}>
+    <Container className={className} {...rest}>
       {toasts.map((toast: any) => {
         return (
           <Toast
