@@ -3,7 +3,7 @@ name: create coverage badge
 on:
     pull_request:
         branches:            
-            - main
+            - master
             - v*
     push:
         branches:
